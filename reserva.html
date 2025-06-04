@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva - Viajes Daya</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Viajes<span>Daya</span></h1>
+        </div>
+        <nav>
+            <ul>
+                 <li><a href="Agencia.html#inicio">Inicio</a></li>
+                <li><a href="Agencia.html#destinos">Destinos</a></li>
+                <li><a href="Agencia.html#paquetes">Paquetes</a></li>
+                <li><a href="Agencia.html#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="formulario-reserva">
+        <h2>Formulario de Reserva</h2>
+        <form id="reservaForm">
+            <div class="form-group">
+                <label for="paquete">Paquete seleccionado:</label>
+                <input type="text" id="paquete" name="paquete" readonly>
+            </div>
+            
+            <div class="form-group">
+                <label for="nombre">Nombre completo:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="fecha">Fecha de viaje:</label>
+                <input type="date" id="fecha" name="fecha" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="personas">Número de personas:</label>
+                <input type="number" id="personas" name="personas" min="1" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="comentarios">Comentarios adicionales:</label>
+                <textarea id="comentarios" name="comentarios" rows="4"></textarea>
+            </div>
+            
+            <div class="form-buttons">
+                <button type="button" id="guardarConsulta" class="btn btn-secondary">Guardar Consulta</button>
+                <button type="button" id="verConsultas" class="btn btn-tertiary">Ver Consultas Guardadas</button>
+            </div>
+        </form>
+
+        <div id="confirmation" style="display: none;">
+            ¡Reserva enviada con éxito! ✔️
+        </div>
+
+        <div id="consultasContainer" style="display: none; margin-top: 30px;">
+            <h3>Consultas Guardadas</h3>
+            <div id="listaConsultas"></div>
+            <button id="cerrarConsultas" class="btn">Cerrar</button>
+        </div>
+    </section>
+
+    <footer id="contacto">
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Contacto</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Calle frigia #2255</p>
+                <p><i class="fas fa-phone"></i> +123 456 7890</p>
+                <p><i class="fas fa-envelope"></i> info@viajesdaya.com</p>
+            </div>
+            <div class="social-media">
+                <h3>Síguenos</h3>
+                <a href="https://www.facebook.com/ViajesDaya" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com/ViajesDaya" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.twitter.com/ViajesDaya" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://wa.me/523310253879" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 ViajesDaya.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
